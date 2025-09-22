@@ -1,0 +1,39 @@
+## **Lepší rozvrh – motivy a compiler**
+
+Tento projekt obsahuje vlastní motivy pro aplikaci [Lepší rozvrh](https://gitlab.com/vitSkalicky/lepsi-rozvrh) a nástroj pro jejich kompilaci.
+
+### Jak to funguje
+- Aplikace **Lepší rozvrh** umožňuje import motivů, ale nepodporuje přímé zadávání HEX barev.
+- Místo toho se motiv zadává jako **ID řetězec** — což je zakódovaný JSON.
+- JSON se nejprve **zkomprimuje pomocí GZIP**, a poté **zakóduje do Base64**.
+- Tento proces zajišťuje skript `compiler.py` nebo alternativně [CyberChef](https://gchq.github.io/CyberChef/).
+
+## **Lepsi-rozvrh – Themes & Compiler**
+This project contains custom themes for the [Lepsi-rozvrh](https://gitlab.com/vitSkalicky/lepsi-rozvrh) app and a compiler tool to encode them.
+
+### How it works
+- The **Lepsi-rozvrh** app supports theme importing, but does not allow direct HEX color input.
+- Instead, themes are provided as a **theme ID** — a compressed and encoded string.
+- The theme JSON is first **compressed using GZIP**, then **encoded in Base64**.
+- This process is handled by the `compiler.py` script or can be done manually via [CyberChef](https://gchq.github.io/CyberChef/).
+
+# Themes
+AquaCream: `H4sIAClr0WgC/32SXW+DIBSG/wvXzYLONY13fsYlu2hak10zoEpawDD34Zr+9wFSnbbOhAufA+/7ngNngDskKCpryikIz6BRjCPVgRBsYBInAVgBhDEVrSYQBmkANXlD+Fgp+SGIphnM/dwDlxXAUVyNwPxve7WSfk/O42gnJb+le4qlIOOBIQJOalFZ8djP4ty/oiV9U7trYQrLLin7ZISqCct403bWOrefZUpJsyuGEPpWt5h1XiwlK+7GKpYzFRTpSLPee7joYav/SLKqPullqL9O1mlkqeT0S6rjBD6LgzwxQa3/6HDFTnqYDGncCF8ZaWsQeg/QwMHQYd/hwfGpB1tECNMXLdtWchA+TugLPbRztuu7mMJSNgMyAR12tu/N3/B79qOfvecqk4F6mx7O5mj2Xn4BMVC6MjcDAAA=`
+
+BlossomMist: `H4sIAFxr0WgC/32SX2+DIBTFvwvPzYJdmxnfdB1xyR6a1mTPDKiSFjCM/XFNv/sAUaet0/jg717OOffqGZAGS4aLigkGkjOoNRdYNyABKM6yDQQLgAlh0liSRnH8gCx5w+RYavUhqetDCKI1uCwASbNyAO5926oV7NudX6Xu9oWdUuKa7hlRkg4HekPyWMmyFe9SeTSn72o3LVxh3mXDPzllesSeRG2abi57eaa1cl0ZhHDpw+STyfO5ZPnNWPl8ppxhG2kyewtnPXz1H0leVif7OIpWMcoiT5VgX0ofR/BZHtSJS+b9B4UOB+l+M7QOK3zl1FQgie6gg71hwMuAe8d1C7aYUm4/tDJGCZDcj+gLO5gp27VTjGGh6h65gAEH2/f6b/g9/7G/fRQqo4VGcQsne3S9l181wWtYNwMAAA==`
+
+BlueberryMilk: `H4sIAGJr0WgC/32SXW+DIBSG/wvXzeLHbKp3UjUu2UXTmuyaAVXSCoa5D9f0vw+Q6nR1Jlz4HHjf9xy4ANwhTlFR0ZqC6AIayWokOxCB0NnGWQhWAGFMeauIt/GD0FfkFeFTKcU7J4qmfuZlCbiuAI5hOQL9v+vVCvo1OY/jvRD1X3qgWHAyHhgi4G3FSyMOYZJm8IaW9HXtroUuLLsk7IMRKicsrZu2M9aZ+QyTUuhd0HEcz9Ekn3WeLyXL78bKlzPlFKlIs957uOhhqv9IsrI6q6Xp+hEG2dpQUdNPIU8T+MSP4sw4Nf6jww1b6WEypLEjfGGkrUDkPjgaDoYWexYPjkEPdogQpi5atK2oQeRP6DM9tnO277uYwkI0A9IBLba2b83v8Af2rZ69ayuTgbqbHs7mqPdefwCGT8nSNwMAAA==`
+
+LemonDust: `H4sIAGlr0WgC/32Sy26DMBBF/8XrqDKkTSp2AYKo1EWUIHXt2g5YiW3kug8a5d9rYx41DQWx4Mz43jsDF4AbJCgqKsopiC6gVowj1YAIZFkWrFdgARDGVGhDVoG9DXlF+FQq+S6I60u3a3BdALyJyxHY951TK+iXdx5v9lLyv/RAsRRkPDBEwEklSicOs/tk2aM5fVu7aWEL8y4p+2CEKo9tea2bfi5ztUwpabtiCGEILcknk+dzyfKbsfL5TDlFJtJkdgdnPdrqP5KsrM7maWmcwDBtqeT0U6qTB5/EUZ6ZoK3/6NDjUdpthtTdCl8Y0RWIgjto4WDY4bDDg+ODAztECDMfWmotOYiWHn2mRz1lezeFDwtZD8gG7HBn+1b/Dn9g3+a3D7qKt9Dg0cHJHm3v9QdxXaHiNwMAAA==`
+
+LilacFog: `H4sIAHBr0WgC/32SX2+DIBTFvwvPzaK1bs43tTYu2UPTmuyZAVXSCoaxP67pdx8I1eHqTHjwd+Gccy+cAeogI7CsSUNAfAatoA0UHYhBlj8G6wgsAESIMKnIKvFXUabIK0THSvB3hhXdBHm4CcFlAVCSViPQ/1ujVpIv5zxKdpw3f+meIM7weGCIgLKaVb147qd5/nBFc/q6dtNCF+Zd1vSDYiIcljet7Exf/dczIbjelXqet/Q0KSadF3PJipuxivlMBYEq0qR3A2c9+uo/krSqT2ppmib3UWYob8gnF0cHPrEDP1FGev/R4Yqt9DAZ3NoRvlAsaxD7d56Gg6HFS4sHx9CALcSYqovmUvIGxIFDn8lBTtnOdOHCkrcD0gEttrZv7e/we/qtnr1vK85A/cjAyRz13ssPS/My/zcDAAA=`
+
+MintCloud: `H4sIAHVr0WgC/32SW2+CMBiG/0uvzVKQDcMdBwlLdmGUZNddW6FRWtKxAzP+97WlosUxEi54vvIePjgB3CNOUVnThoLoBFrJGiR7EIEVTJM0AAuAMKa8UwTCIAugIm8IHyopPjhRdA3zMI/BeQFwnFRXoJ83g1pJv/X7yzAIg9wMtkI093RHseDk+sIYAac1r4x44md5llyQqz/mM7MbC3cw75KxT0aodNi6abveWOfmMkxKoU8lEELf6BaT5sVc8+LP5sV8poIiFWnSfYBz7YfpP5Ksqo/q1jTIkqc4NVQ09EvIgwOf+V4cGafG/+pwwVZ63Axp7QpfGelqEHkPUMPR0GLf4tHxcQAbRAhTH1p0nWhAtHToC913U7YdWriwFO2IdECLre17ext+x37Ub+/ZibNQbzXAyR712fMv/iOfrTcDAAA=`
+
+PastelCore: `H4sIAH1r0WgC/32Sy27DIBBF/4V1VNmuIqXeJY0rV8oiSix1TYHYKAEsSh9ulH8vA8QublyPvOAMzL0zcEakw5LhqmGCofyMWs0F1h3K0WoNgWYIE8KksSRLISx5xeRYa/UuqaVPcwh0mSGyXNUDgPXWV6vYV3SeLHdKib90z4iSdDjQWyCPjaxd8SKBuKKp+pC7KQGJaZU1/+CU6YgVojWd78t9jmmt3K4kSTJnphx1Xk45K2/aKqc9lQxbS6PePZzUcNl/SvK6Odkf6EMB4agS7FPpYwSf5UGduGROf1C44lC6nwxtwwhfODUNytO7BGAvGHAWcK8492CLKeX2opUxSqD8PqIbdjBjtvNdxLBSbY/AYMBB9q39bX7Pv+2zT0MmGmi68HA0R9h7+QG2AIrPNwMAAA==`
+
+PeachFade: `H4sIAIRr0WgC/32Sy26DMBBF/8XrqIJQ2pQdkCAqdRElSF27tgNWgo1c+qBR/r1+ATENRfKCM+N77wycAeogI7CoSE1AdAaNoDUUHYhAlsXJkw8WACJEWCtJuL73gkdJ3iA6loJ/MKz7smDjgcsCoDgpR6Det0atIN/OfRTvOK//0j1BnOHxwhABpRUrrXiaJmmP5vRV7aaFKsy7rOknxUQ4bFM3bdfPJR/NhOCqK/E8b6knzSeT53PJ8pux8vlMOYEy0mR2A2c9dPUfSVpWJ3kMXcUPoaa8Jl9cHB34zA78RBnR/qNDjwdpuxnc2BW+UtxWIPLvPAUHQ4uXFg+OoQFbiDGVH5q3La9BFDj0hRzaKduZKVxY8GZAKqDF1va9uQ6/pz/yt/dtxVmovzJwskfVe/kFiW1ISzcDAAA=`
+
+SageSoft: `H4sIAItr0WgC/32SX2+DIBTFvwvPzSJ1btY3a21csoemNdkzA6qkFQxjf1zT7z4QaoerM+HB34Vzzr1wArhDnKKypg0FyQm0kjVIdiABab6KYghmAGFMudIkDB8WMNfkFeFDJcU7J5qu4TrOF+A8AzhdVldg/jdWraRf3nmcboVo/tIdxYKT64EhAs5qXvXiWZTDNLqgKX1Tu2lhCtMuK/bBCJUey5tWdbav/uuZlMLsWgZBMA8MKUadF1PJipuxiulMBUU60qh3Cyc9+uo/kqyqj3oZGsPsMb7vqWjop5AHDz7xvTgyTnv/q8MFO+lhMqR1I3xhRNUggXeBgYOhw3OHB8fIgg0ihOmLFkqJBiShR5/pXo3Z1nbhw1K0AzIBHXa2b+3v8Dv2rZ89dBVvoDC2cDRHs/f8A+xkykE3AwAA`
+
+VanillaSky: `H4sIAJBr0WgC/32Sy26DMBBF/8XrqDKEthG78BKVuogSpK5d2wErsY1c90Gj/HttMFBoKJIXnBnfe2fgAnCDBEVFRTkF4QXUinGkGhCCLEth5IMVQBhToQ15SII48Ax5RfhUKvkuSNuXbVIPXFcAb6NyBPZ916kV9GtyH2/3UvK/9ECxFGS8METAcSVKJ57G0bpHS/q2dtPCFpZdEvbBCFUTlvJaN/1c5mmZUtJ2RRBCH1qSzybPl5LlN2Ply5lyikyk2ewdXPRoq/9IsrI6m9PR6DFIWio5/ZTqNIFP4ijPTNDWf3To8SDtNkNqt8IXRnQFQu8OWjgYOuw7PDjed2CHCGHmQ0utJQfhekKf6VHP2b6bYgoLWQ/IBnTY2b7Vv8Mf2Lf57T1XmSzU23Rwtkfbe/0BwOQXjjcDAAA=`
