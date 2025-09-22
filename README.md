@@ -8,15 +8,6 @@ Tento projekt obsahuje vlastní motivy pro aplikaci [Lepší rozvrh](https://git
 - JSON se nejprve **zkomprimuje pomocí GZIP**, a poté **zakóduje do Base64**.
 - Tento proces zajišťuje skript `compiler.py` nebo alternativně [CyberChef](https://gchq.github.io/CyberChef/).
 
-## **Lepsi-rozvrh – Themes & Compiler**
-This project contains custom themes for the [Lepsi-rozvrh](https://gitlab.com/vitSkalicky/lepsi-rozvrh) app and a compiler tool to encode them.
-
-### How it works
-- The **Lepsi-rozvrh** app supports theme importing, but does not allow direct HEX color input.
-- Instead, themes are provided as a **theme ID** — a compressed and encoded string.
-- The theme JSON is first **compressed using GZIP**, then **encoded in Base64**.
-- This process is handled by the `compiler.py` script or can be done manually via [CyberChef](https://gchq.github.io/CyberChef/).
-
 # Themes
 ## Pastel
 ![AquaCream](./pics/AquaCream.jpg)
