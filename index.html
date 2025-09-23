@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lepší rozvrh – motivy a compiler</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .theme-card {
+            border: 1px solid #dee2e6;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        }
+        .theme-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.25rem;
+            margin-bottom: 1rem;
+        }
+        .code-container {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 0.25rem;
+            padding: 1rem;
+            word-break: break-all;
+            white-space: normal;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container my-5">
+    <header class="mb-4 text-center">
+        <h1 class="fw-bold">Lepší rozvrh – motivy a compiler</h1>
+        <p class="lead">Tento projekt obsahuje vlastní motivy pro aplikaci <a href="https://gitlab.com/vitSkalicky/lepsi-rozvrh" target="_blank">Lepší rozvrh</a> a nástroj pro jejich kompilaci.</p>
+    </header>
+
+    <main>
+        <section class="mb-5">
+            <h2 class="fw-bold">Jak to funguje</h2>
+            <p>Aplikace <strong>Lepší rozvrh</strong> umožňuje import motivů, ale nepodporuje přímé zadávání HEX barev. Místo toho se motiv zadává jako <strong>ID řetězec</strong> — což je zakódovaný JSON.</p>
+            <p>JSON se nejprve <strong>zkomprimuje pomocí GZIP</strong>, a poté <strong>zakóduje do Base64</strong>. Tento proces zajišťuje skript <code>compiler.py</code> nebo alternativně <a href="https://gchq.github.io/CyberChef/" target="_blank">CyberChef</a>.</p>
+        </section>
+        
+        <hr>
+
+        <section class="mb-5">
+            <h2 class="fw-bold">Themes</h2>
+            
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="fw-semibold">Pastel</h3>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                    <div class="theme-card w-100">
+                        <h4 class="fw-normal">AquaCream</h4>
+                        <img src="./pics/AquaCream.jpg" alt="AquaCream theme preview" class="img-fluid theme-image">
+                        <div class="code-container">
+                            <code>H4sIAClr0WgC/32SXW+DIBSG/wvXzYLONY13fsYlu2hak10zoEpawDD34Zr+9wFSnbbOhAufA+/7ngNngDskKCpryikIz6BRjCPVgRBsYBInAVgBhDEVrSYQBmkANXlD+Fgp+SGIphnM/dwDlxXAUVyNwPxve7WSfk/O42gnJb+le4qlIOOBIQJOalFZ8djP4ty/oiV9U7trYQrLLin7ZISqCct403bWOrefZUpJsyuGEPpWt5h1XiwlK+7GKpYzFRTpSLPee7joYav/SLKqPullqL9O1mlkqeT0S6rjBD6LgzwxQa3/6HDFTnqYDGncCF8ZaWsQeg/QwMHQYd/hwfGpB1tECNMXLdtWchA+TugLPbRztuu7mMJSNgMyAR12tu/N3/B79qOfvecqk4F6mx7O5mj2Xn4BMVC6MjcDAAA=</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                    <div class="theme-card w-100">
+                        <h4 class="fw-normal">BlossomMist</h4>
+                        <img src="./pics/BlossomMist.jpg" alt="BlossomMist theme preview" class="img-fluid theme-image">
+                        <div class="code-container">
+                            <code>H4sIAFxr0WgC/32SX2+DIBTFvwvPzYJdmxnfdB1xyR6a1mTPDKiSFjCM/XFNv/sAUaet0/jg717OOffqGZAGS4aLigkGkjOoNRdYNyABKM6yDQQLgAlh0liSRnH8gCx5w+RYavUhqetDCKI1uCwASbNyAO5926oV7NudX6Xu9oWdUuKa7hlRkg4HekPyWMmyFe9SeTSn72o3LVxh3mXDPzllesSeRG2abi57eaa1cl0ZhHDpw+STyfO5ZPnNWPl8ppxhG2kyewtnPXz1H0leVif7OIpWMcoiT5VgX0ofR/BZHtSJS+b9B4UOB+l+M7QOK3zl1FQgie6gg71hwMuAe8d1C7aYUm4/tDJGCZDcj+gLO5gp27VTjGGh6h65gAEH2/f6b/g9/7G/fRQqo4VGcQsne3S9l181wWtYNwMAAA==</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                    <div class="theme-card w-100">
+                        <h4 class="fw-normal">LilacFog</h4>
+                        <img src="./pics/LilacFog.jpg" alt="LilacFog theme preview" class="img-fluid theme-image">
+                        <div class="code-container">
+                            <code>H4sIAHBr0WgC/32SX2+DIBTFvwvPzaK1bs43tTYu2UPTmuyZAVXSCoaxP67pdx8I1eHqTHjwd+Gccy+cAeogI7CsSUNAfAatoA0UHYhBlj8G6wgsAESIMKnIKvFXUabIK0THSvB3hhXdBHm4CcFlAVCSViPQ/1ujVpIv5zxKdpw3f+meIM7weGCIgLKaVb147qd5/nBFc/q6dtNCF+Zd1vSDYiIcljet7Exf/dczIbjelXqet/Q0KSadF3PJipuxivlMBYEq0qR3A2c9+uo/krSqT2ppmib3UWYob8gnF0cHPrEDP1FGev/R4Yqt9DAZ3NoRvlAsaxD7d56Gg6HFS4sHx9CALcSYqovmUvIGxIFDn8lBTtnOdOHCkrcD0gEttrZv7e/we/qtnr1vK85A/cjAyRz13ssPS/My/zcDAAA=</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                    <div class="theme-card w-100">
+                        <h4 class="fw-normal">PastelCore</h4>
+                        <img src="./pics/PastelCore.jpg" alt="PastelCore theme preview" class="img-fluid theme-image">
+                        <div class="code-container">
+                            <code>H4sIAH1r0WgC/32Sy27DIBBF/4V1VNmuIqXeJY0rV8oiSix1TYHYKAEsSh9ulH8vA8QublyPvOAMzL0zcEakw5LhqmGCofyMWs0F1h3K0WoNgWYIE8KksSRLISx5xeRYa/UuqaVPcwh0mSGyXNUDgPXWV6vYV3SeLHdKib90z4iSdDjQWyCPjaxd8SKBuKKp+pC7KQGJaZU1/+CU6YgVojWd78t9jmmt3K4kSTJnphx1Xk45K2/aKqc9lQxbS6PePZzUcNl/SvK6Odkf6EMB4agS7FPpYwSf5UGduGROf1C44lC6nwxtwwhfODUNytO7BGAvGHAWcK8492CLKeX2opUxSqD8PqIbdjBjtvNdxLBSbY/AYMBB9q39bX7Pv+2zT0MmGmi68HA0R9h7+QG2AIrPNwMAAA==</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="fw-semibold">Less contrast <span class="text-danger">!! hard to read !!</span></h3>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                    <div class="theme-card w-100">
+                        <h4 class="fw-normal">PeachFade</h4>
+                        <img src="./pics/PeachFade.jpg" alt="PeachFade theme preview" class="img-fluid theme-image">
+                        <div class="code-container">
+                            <code>H4sIAIRr0WgC/32Sy26DMBBF/8XrqIJQ2pQdkCAqdRElSF27tgNWgo1c+qBR/r1+ATENRfKCM+N77wycAeogI7CoSE1AdAaNoDUUHYhAlsXJkw8WACJEWCtJuL73gkdJ3iA6loJ/MKz7smDjgcsCoDgpR6Det0atIN/OfRTvOK//0j1BnOHxwhABpRUrrXiaJmmP5vRV7aaFKsy7rOknxUQ4bFM3bdfPJR/NhOCqK/E8b6knzSeT53PJ8pux8vlMOYEy0mR2A2c9dPUfSVpWJ3kMXcUPoaa8Jl9cHB34zA78RBnR/qNDjwdpuxnc2BW+UtxWIPLvPAUHQ4uXFg+OoQFbiDGVH5q3La9BFDj0hRzaKduZKVxY8GZAKqDF1va9uQ6/pz/yt/dtxVmovzJwskfVe/kFiW1ISzcDAAA=</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                    <div class="theme-card w-100">
+                        <h4 class="fw-normal">MintCloud</h4>
+                        <img src="./pics/MintCloud.jpg" alt="MintCloud theme preview" class="img-fluid theme-image">
+                        <div class="code-container">
+                            <code>H4sIAHVr0WgC/32SW2+CMBiG/0uvzVKQDcMdBwlLdmGUZNddW6FRWtKxAzP+97WlosUxEi54vvIePjgB3CNOUVnThoLoBFrJGiR7EIEVTJM0AAuAMKa8UwTCIAugIm8IHyopPjhRdA3zMI/BeQFwnFRXoJ83g1pJv/X7yzAIg9wMtkI093RHseDk+sIYAac1r4x44md5llyQqz/mM7MbC3cw75KxT0aodNi6abveWOfmMkxKoU8lEELf6BaT5sVc8+LP5sV8poIiFWnSfYBz7YfpP5Ksqo/q1jTIkqc4NVQ09EvIgwOf+V4cGafG/+pwwVZ63Axp7QpfGelqEHkPUMPR0GLf4tHxcQAbRAhTH1p0nWhAtHToC913U7YdWriwFO2IdECLre17ext+x37Ub+/ZibNQbzXAyR712fMv/iOfrTcDAAA=</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                    <div class="theme-card w-100">
+                        <h4 class="fw-normal">BlueberryMilk</h4>
+                        <img src="./pics/BlueberryMilk.jpg" alt="BlueberryMilk theme preview" class="img-fluid theme-image">
+                        <div class="code-container">
+                            <code>H4sIAGJr0WgC/32SXW+DIBSG/wvXzeLHbKp3UjUu2UXTmuyaAVXSCoa5D9f0vw+Q6nR1Jlz4HHjf9xy4ANwhTlFR0ZqC6AIayWokOxCB0NnGWQhWAGFMeauIt/GD0FfkFeFTKcU7J4qmfuZlCbiuAI5hOQL9v+vVCvo1OY/jvRD1X3qgWHAyHhgi4G3FSyMOYZJm8IaW9HXtroUuLLsk7IMRKicsrZu2M9aZ+QyTUuhd0HEcz9Ekn3WeLyXL78bKlzPlFKlIs957uOhhqv9IsrI6q6Xp+hEG2dpQUdNPIU8T+MSP4sw4Nf6jww1b6WEypLEjfGGkrUDkPjgaDoYWexYPjkEPdogQpi5atK2oQeRP6DM9tnO277uYwkI0A9IBLba3z/AH9q2evWsrk4G6mx7O5mj2Xn4BMVC6MjcDAAA=</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="fw-semibold">High contrast</h3>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                    <div class="theme-card w-100">
+                        <h4 class="fw-normal">CyberCrimson</h4>
+                        <img src="./pics/CyberCrimson.jpg" alt="CyberCrimson theme preview" class="img-fluid theme-image">
+                        <div class="code-container">
+                            <code>H4sIAGiE0WgC/32Sy26DMBBF/8XrqMJAG8QuvESlLqIEqWsXO2Al2MilDxrl3+sxDikoFIuFz52ZOzNwRmVPBCNFzRqGwjNqFW+I6lGIsgyvfR+tEClLJjpNXAxHkzdSHislPwSFuA0cdFmhchNVJjGN0hTBfTtUK9g35EdrHOPYCDspG0uDwEn9zNA9K6Wgt4TEczPXSHEtKls8ThL3ipbqg3bXAoRll4R/csrUhKVN2/XWGh7DlJIQFTmO4zpA8tnk+VJn+d228uWeckZ0S7PZB7joYdR/SvKqPukXaOb7nvdkqGzYl1THCXwWB3nighn/m8MV29LjZmhrV/jKaVejED84AEdDi12LR8fHAWwJpVx/aNl1skGhN6Ev7NDN2W6YYgoL2Y4IGrTY2r63f5vf8x/922OrTBaKgwHO9gixl1+LAGYWNwMAAA==</code>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                    <div class="theme-card w-100">
+                        <h4 class="fw-normal">GlacierEdge</h4>
+                        <img src="./pics/GlacierEdge.jpg" alt="GlacierEdge theme preview" class="img-fluid theme-image">
+                        <div class="code-container">
+                            <code>H4sIAE2E0WgC/32SyW6DMBRF/8XrqDJDm4gdMSAqdRElSF27tgNWgo1cOqRR/r2eQgoKRfKC8+x773v2GZATFgxXDWsZSM6gU7zF6gQSAOEaZTFYAEwIE70m4VMURitN3jA51Ep+CKppjvKiCMBlAUi6rm/A/G+cWsW+R+dJupWy9TRaxsu4sHTHiBT0dmCIQFAjaiuOimyVoSua0ze1uxamMO+S8U9OmRqxvO36k7Uu7GeZUtLsWkMIQ2hIOem8nEtW3o1VzmcqGdaRJr07OOthq/9I8ro56uVoipCLLFv2JdVhBJ/FXh65YNb/5nDFXnqYDO38CF857RuQBA/QwMHQ49DjwfHRgQ2mlOuLln0vW5BEI/rC9v2UbV0XY1jJbkAmoMfe9r37G37Hf/SzD3xlNNBg5eBkjmbv5ReS/uDuNwMAAA==</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                    <div class="theme-card w-100">
+                        <h4 class="fw-normal">TerminalGreen</h4>
+                        <img src="./pics/TerminalGreen.jpg" alt="TerminalGreen theme preview" class="img-fluid theme-image">
+                        <div class="code-container">
+                            <code>H4sIAHqE0WgC/32SzW6DMBCE38XnqDKpKlXc0jYRlXqIEqSeXXsDVmIvct0fGuXda2OHBheCxYFvl5nZhSPhLdPAyhoUkPxIGiMVMy3JCaWrFaVkRhjnoG1H/OXIG+P7yuCHFo5m1B9ymhG+eKj+gH9eB7USvu2lIl9sENV/ugWOWoy98FjrqhOfU3/OaErf10YtfGHa5Ul+SgFmwJaqsW1n3Y/Pl8ag7/I9gRTJ5MVUsmI0VjGdqQDmIiWzBzjp0VWvSMqqPrg7oajgC81+AJ/1Dg9SQ7KAM06lRRNX+CqFrUme3VAPe8OI5xH3jncBrJkQ0n1otBYVyW8H9AV2NmWbMMUQltj0yAeMONq+N5fht/LH/fZZrAwWmt0HmOzR955+AYUCltY3AwAA</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                    <div class="theme-card w-100">
+                        <h4 class="fw-normal">VoidPulse</h4>
+                        <img src="./pics/VoidPulse.jpg" alt="VoidPulse theme preview" class="img-fluid theme-image">
+                        <div class="code-container">
+                            <code>H4sIAJGE0WgC/32SXW+DIBiF/wvXzYLWbsa72WlcsoumNdk1A6qkFQxjH67pfx9fc8XUQrzgeeU9hwMngAfEKapb2lGQnUAvWYfkADIAYQ7LEiwAwphypUlZJjCNNHlD+NBI8cGJplFsJjgvAH7MGwMKM4FZb1y3mn67/WbYwlaIztMc5sV6ZemOYsHJ/4bRAl63vLHN4/tlvEz/0Fx/U7sqYQrzKk/skxEqA1Z0vRqsNLTDMimFtILRQ5IYUrmTuyjMes5ZddVWNe+pokhbmgTr4KyGrd5oyZr2qL/gTnElOvol5CGAz3wvjoxTl7093yWeSpPeR/jKiGpBFt1BA0dBj2OPR8WVAxtECNMXLZQSHciWAX2hezVlW3eKENaiH5Ex6LGXfe8vze/Yj372ka8EgUapg5Mczb/nX+XnbSs3AwAA</code>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
